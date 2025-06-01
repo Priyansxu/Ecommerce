@@ -10,7 +10,7 @@ import { products } from '@/data/products';
 export default function ProductsPage() {
   return (
     <div className="min-h-screen bg-black text-white">
-      <HeroSection />
+      <Hero />
       
       {/* Quotes Section */}
       <div className="px-6 lg:px-12 pb-16">
