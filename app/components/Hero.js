@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-export const Hero = () => {
+export default function Hero() {
   return (
     <motion.div 
       className="relative px-6 lg:px-12 py-16 overflow-hidden"
