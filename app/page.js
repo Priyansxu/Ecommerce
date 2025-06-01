@@ -91,7 +91,6 @@ const products = [
 export default function ProductsPage() {
   return (
     <div className="min-h-screen bg-zinc-900 text-white">
-      <div className="min-h-screen bg-zinc-900 text-white">
       <motion.div 
         className="relative px-6 lg:px-12 py-16 overflow-hidden"
         initial={{ opacity: 0 }}
