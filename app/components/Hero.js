@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 export default function Hero() {
   return (
     <motion.div 
-      className="relative px-6 lg:px-12 py-16 overflow-hidden m-6 rounded-full"
+      className="relative px-6 lg:px-12 py-16 overflow-hidden m-6 rounded-xl"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.6 }}
@@ -32,7 +32,7 @@ export default function Hero() {
       <motion.div 
           className="absolute bottom-0 left-0 right-0 h-36"
           style={{
-            background: 'linear-gradient(to top, #000000 0%, #936DF8 20%, #5E2DE0 40%, #3E2291 60%, #22184D 80%, #111827 100%)',
+            background: 'linear-gradient(to top, #BDA5FB 0%, #936DF8 20%, #5E2DE0 40%, #3E2291 60%, #22184D 80%, #000000 100%)',
             clipPath: "path('M 0 180 L 0 20 Q 200 80 400 20 L 400 180 Z')"
           }}
           initial={{ opacity: 0, y: 20 }}
