@@ -1,3 +1,5 @@
+"use client";
+
 import { Star, Heart, ShoppingCart, Quote } from 'lucide-react'
 import { motion } from 'framer-motion'
 
