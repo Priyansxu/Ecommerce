@@ -34,6 +34,9 @@ export default function Hero() {
         </motion.p>
       </div>
 
+      {/* Full Gaussian Blur Overlay */}
+      <div className="absolute inset-0 backdrop-blur-3xl bg-white/5 z-0" />
+
       {/* Gradient Background */}
       <div className="absolute bottom-0 left-0 right-0 h-36 overflow-hidden">
         <motion.svg 
@@ -61,25 +64,24 @@ export default function Hero() {
         </motion.svg>
       </div>
 
-        {/* Grainy Texture */}
-        <motion.div 
-          className="absolute inset-0 opacity-60"
-          style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='6' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
-            mixBlendMode: 'overlay',
-            filter: 'blur(0px) drop-shadow(0 0 8px rgba(0,0,0,0.3))'
-          }}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 0.6 }}
-          transition={{ delay: 0.8, duration: 1 }}
-        />
+      {/* Grainy Texture */}
+      <motion.div 
+        className="absolute inset-0 opacity-60"
+        style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequen[...]`,
+          mixBlendMode: 'overlay',
+          filter: 'blur(0px) drop-shadow(0 0 8px rgba(0,0,0,0.3))'
+        }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 0.6 }}
+        transition={{ delay: 0.8, duration: 1 }}
+      />
 
       {/* Motion Blur Overlay */}
       <motion.div 
         className="absolute inset-0 opacity-20"
         style={{
           background: 'linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.1) 50%, transparent 100%)',
-          filter: 'blur(2px)',
           transform: 'skewY(0deg)'
         }}
         initial={{ x: -400, opacity: 0 }}
