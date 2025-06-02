@@ -9,9 +9,15 @@ export default function Hero() {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.6 }}
     >
-      <div className="max-w-7xl mx-auto relative z-10">
+      <div className="max-w-7xl mx-auto relative z-10 mb-16">
         <motion.h1 
-          className="text-4xl lg:text-6xl font-light mb-4"
+          className="text-4xl lg:text-6xl font-bold mb-4"
+          style={{
+            background: 'linear-gradient(135deg, #ffffff 0%, #a1a1aa 100%)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            backgroundClip: 'text'
+          }}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.6 }}
@@ -29,16 +35,31 @@ export default function Hero() {
       </div>
 
       {/* Gradient Background */}
-      <motion.div 
-          className="absolute bottom-0 left-0 right-0 h-36"
-          style={{
-            background: 'linear-gradient(to top, #BDA5FB 0%, #936DF8 20%, #5E2DE0 40%, #3E2291 60%, #22184D 80%, #000000 100%)',
-            clipPath: "path('M 0 180 L 0 20 Q 200 80 400 20 L 400 180 Z')"
-          }}
+      <div className="absolute bottom-0 left-0 right-0 h-36 overflow-hidden">
+        <motion.svg 
+          className="absolute bottom-0 w-full h-full"
+          viewBox="0 0 1200 144"
+          preserveAspectRatio="none"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.8, ease: "easeOut" }}
-        />
+        >
+          <defs>
+            <linearGradient id="waveGradient" x1="0%" y1="100%" x2="0%" y2="0%">
+              <stop offset="0%" stopColor="#BDA5FB" />
+              <stop offset="20%" stopColor="#936DF8" />
+              <stop offset="40%" stopColor="#5E2DE0" />
+              <stop offset="60%" stopColor="#3E2291" />
+              <stop offset="80%" stopColor="#22184D" />
+              <stop offset="100%" stopColor="#000000" />
+            </linearGradient>
+          </defs>
+          <path
+            d="M 0 144 L 0 20 Q 600 80 1200 20 L 1200 144 Z"
+            fill="url(#waveGradient)"
+          />
+        </motion.svg>
+      </div>
 
         {/* Grainy Texture */}
         <motion.div 
