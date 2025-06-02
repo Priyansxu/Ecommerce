@@ -34,18 +34,6 @@ export default function Hero() {
         </motion.p>
       </div>
 
-      {/* Glass Effect Blur */}
-      <div 
-        className="absolute inset-0 z-0"
-        style={{
-          background: 'rgba(255, 255, 255, 0.1)',
-          backdropFilter: 'blur(16px) saturate(180%)',
-          WebkitBackdropFilter: 'blur(16px) saturate(180%)',
-          border: '1px solid rgba(255, 255, 255, 0.125)',
-          boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.37)'
-        }}
-      />
-
       {/* Gradient Background */}
       <div className="absolute bottom-0 left-0 right-0 h-36 overflow-hidden">
         <motion.svg 
@@ -78,15 +66,14 @@ export default function Hero() {
         className="absolute inset-0 opacity-60"
         style={{
           backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequen[.[...]`,
-          mixBlendMode: 'overlay',
-          filter: 'drop-shadow(0 0 8px rgba(0,0,0,0.3))'  // Removed blur from here
+          mixBlendMode: 'overlay'
         }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 0.6 }}
         transition={{ delay: 0.8, duration: 1 }}
       />
 
-      {/* Motion Blur Overlay */}
+      {/* Motion Overlay */}
       <motion.div 
         className="absolute inset-0 opacity-20"
         style={{
