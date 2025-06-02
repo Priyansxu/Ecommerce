@@ -1,4 +1,3 @@
-"use client"
 import { Quote } from "lucide-react"
 
 export default function QuoteCard({ quote, author }) {
