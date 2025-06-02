@@ -1,14 +1,12 @@
-import React from 'react';
-import { Quote } from 'lucide-react';
+"use client"
+import { Quote } from "lucide-react"
 
 export default function QuoteCard({ quote, author }) {
   return (
-    <div className="bg-gray-800 border border-gray-700 rounded-lg p-6">
-      <Quote className="w-6 h-6 text-orange-500 mb-4" />
-      <blockquote className="text-lg font-light leading-relaxed mb-4 text-white">
-        "{quote}"
-      </blockquote>
-      <cite className="text-gray-400 text-sm">— {author}</cite>
+    <div className="bg-zinc-800/50 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-zinc-700 transition-transform duration-200 hover:scale-[1.02]">
+      <Quote className="h-6 w-6 text-zinc-400 mb-4" />
+      <p className="text-lg font-light italic mb-4">{quote}</p>
+      <p className="text-sm text-zinc-400 text-right">— {author}</p>
     </div>
-  );
+  )
 }
