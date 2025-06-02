@@ -51,7 +51,7 @@ export default function Hero() {
               <stop offset="40%" stopColor="#5E2DE0" />
               <stop offset="60%" stopColor="#3E2291" />
               <stop offset="80%" stopColor="#22184D" />
-              <stop offset="100%" stopColor="#201742" />
+              <stop offset="100%" stopColor="#1A1631" />
             </linearGradient>
           </defs>
           <path
