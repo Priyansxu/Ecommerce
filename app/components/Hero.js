@@ -35,7 +35,7 @@ export default function Hero() {
       </div>
 
       {/* Full Gaussian Blur Overlay */}
-      <div className="absolute inset-0 backdrop-blur-3xl bg-white/5 z-0" />
+      <div className="absolute inset-0 backdrop-blur-md bg-white/5 z-0" />
 
       {/* Gradient Background */}
       <div className="absolute bottom-0 left-0 right-0 h-36 overflow-hidden">
