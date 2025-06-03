@@ -34,38 +34,35 @@ export default function Hero() {
         </motion.p>
       </div>
 
-      {/* Gradient Background */}
-      <div className="absolute bottom-0 left-0 right-0 h-36 overflow-hidden">
-        <motion.svg 
-          className="absolute bottom-0 w-full h-full"
-          viewBox="0 0 1200 144"
-          preserveAspectRatio="none"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4, duration: 0.8, ease: "easeOut" }}
-        >
-          <defs>
-            <linearGradient id="waveGradient" x1="0%" y1="100%" x2="0%" y2="0%">
-              <stop offset="0%" stopColor="#BDA5FB" />
-              <stop offset="20%" stopColor="#936DF8" />
-              <stop offset="40%" stopColor="#5E2DE0" />
-              <stop offset="60%" stopColor="#3E2291" />
-              <stop offset="80%" stopColor="#22184D" />
-              <stop offset="100%" stopColor="#130F2C" />
-            </linearGradient>
-          </defs>
-          <path
-            d="M 0 144 L 0 20 Q 600 80 1200 20 L 1200 144 Z"
-            fill="url(#waveGradient)"
-          />
-        </motion.svg>
-      </div>
+      {/* PNG Gradient Background */}
+      <motion.div 
+        className="absolute inset-0 w-full h-full"
+        initial={{ opacity: 0, scale: 1.1 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 0.4, duration: 0.8, ease: "easeOut" }}
+      >
+        <div 
+          className="w-full h-full bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: `url('/gradient.png')`,
+          }}
+        />
+        
+        {/* Fallback gradient in case PNG doesn't load */}
+        <div 
+          className="absolute inset-0 w-full h-full"
+          style={{
+            background: 'linear-gradient(180deg, #BDA5FB 0%, #936DF8 20%, #5E2DE0 40%, #3E2291 60%, #22184D 80%, #130F2C 100%)',
+            zIndex: -1
+          }}
+        />
+      </motion.div>
 
       {/* Grainy Texture */}
       <motion.div 
-        className="absolute inset-0 opacity-60"
+        className="absolute inset-0 opacity-60 pointer-events-none"
         style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequen[.[...]`,
+          backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.4'/%3E%3C/svg%3E")`,
           mixBlendMode: 'overlay'
         }}
         initial={{ opacity: 0 }}
@@ -75,7 +72,7 @@ export default function Hero() {
 
       {/* Motion Overlay */}
       <motion.div 
-        className="absolute inset-0 opacity-20"
+        className="absolute inset-0 opacity-20 pointer-events-none"
         style={{
           background: 'linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.1) 50%, transparent 100%)',
           transform: 'skewY(0deg)'
