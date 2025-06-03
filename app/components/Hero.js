@@ -4,34 +4,30 @@ import { motion } from 'framer-motion';
 export default function Hero() {
   return (
     <motion.div 
-      className="relative px-6 lg:px-12 py-16 overflow-hidden m-6 rounded-xl"
+      className="relative px-6 lg:px-12 py-16 overflow-hidden h-screen bg-black"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.6 }}
     >
-      <div className="max-w-7xl mx-auto relative z-10 mb-16">
-        <motion.h1 
-          className="text-4xl lg:text-6xl font-bold mb-4"
-          style={{
-            background: 'linear-gradient(135deg, #ffffff 0%, #a1a1aa 100%)',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
-            backgroundClip: 'text'
-          }}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3, duration: 0.6 }}
-        >
-          Psychology Books
-        </motion.h1>
-        <motion.p 
-          className="text-gray-400 text-lg max-w-2xl"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5, duration: 0.6 }}
-        >
-          Discover transformative psychology books that unlock the mysteries of the human mind.
-        </motion.p>
+      <div className="max-w-7xl mx-auto relative z-10 flex items-center justify-center h-full">
+        <div className="text-center">
+          <motion.h1 
+            className="text-4xl lg:text-6xl font-bold mb-4 text-white"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3, duration: 0.6 }}
+          >
+            Psychology Books
+          </motion.h1>
+          <motion.p 
+            className="text-gray-400 text-lg max-w-2xl mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5, duration: 0.6 }}
+          >
+            Discover transformative psychology books that unlock the mysteries of the human mind.
+          </motion.p>
+        </div>
       </div>
 
       {/* PNG Gradient Background */}
