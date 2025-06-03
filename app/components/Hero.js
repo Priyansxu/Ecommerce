@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 export default function Hero() {
   return (
     <motion.div 
-      className="relative px-6 lg:px-12 py-16 overflow-hidden h-screen bg-black m-6 rounded-xl"
+      className="relative px-6 lg:px-12 py-16 overflow-hidden h-screen bg-black m-6 -mt-8 rounded-xl"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.6 }}
