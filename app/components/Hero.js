@@ -1,17 +1,8 @@
 import React from 'react';
 import { Raleway, Lato } from 'next/font/google';
 
-const raleway = Raleway({
-  subsets: ['latin'],
-  weight: '500',
-  display: 'swap',
-});
-
-const lato = Lato({
-  subsets: ['latin'],
-  weight: '500',
-  display: 'swap',
-});
+const raleway = Raleway({ subsets: ["latin"], weight: ["400", "700"] })
+const lato = Lato({ subsets: ["latin"], weight: ["400", "700"] })
 
 export default function Hero() {
   return (
