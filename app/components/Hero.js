@@ -1,14 +1,27 @@
 import React from 'react';
+import { Raleway, Lato } from 'next/font/google';
+
+const raleway = Raleway({
+  subsets: ['latin'],
+  weight: '500',
+  display: 'swap',
+});
+
+const lato = Lato({
+  subsets: ['latin'],
+  weight: '500',
+  display: 'swap',
+});
 
 export default function Hero() {
   return (
     <div className="relative px-6 lg:px-12 py-16 overflow-hidden h-screen bg-black m-6 -mt-20 rounded-xl md:rounded-3xl transition-opacity duration-600 ease-in-out">
       <div className="max-w-7xl mx-auto relative z-10 flex items-center justify-center h-full">
         <div className="text-center">
-          <h1 className="text-4xl lg:text-6xl font-bold mb-4 text-white transition-all duration-600 ease-in-out transform translate-y-0">
+          <h1 className={`text-4xl lg:text-6xl font-bold mb-4 text-white transition-all duration-600 ease-in-out transform translate-y-0 ${raleway.className}`}>
             Psychology Books
           </h1>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto transition-all duration-600 ease-in-out transform translate-y-0">
+          <p className={`text-gray-400 text-lg max-w-2xl mx-auto transition-all duration-600 ease-in-out transform translate-y-0 ${lato.className}`}>
             Discover transformative psychology books that unlock the mysteries of the human mind.
           </p>
         </div>
