@@ -9,8 +9,10 @@ export default function Hero() {
     <div className="relative px-6 lg:px-12 py-16 overflow-hidden h-screen bg-black m-6 -mt-20 rounded-xl md:rounded-3xl transition-opacity duration-600 ease-in-out">
       <div className="max-w-7xl mx-auto relative z-10 flex items-center justify-center h-full">
         <div className="text-center">
-          <h1 className={`text-4xl lg:text-6xl font-bold mb-4 bg-gradient-to-br from-white to-gray-400 text-transparent bg-clip-text transition-all duration-600 ease-in-out transform translate-y-0 ${raleway.className}`}>
-  Ecommerce Website
+          <h1
+  className={`inline-block text-4xl lg:text-6xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-br from-white from-0% via-white via-80% to-gray-400 to-100% transition-all duration-600 ease-in-out transform translate-y-0 ${raleway.className}`}
+> 
+    Ecommerce Website
           </h1>
           <p className={`text-gray-400 text-lg max-w-2xl mx-auto transition-all duration-600 ease-in-out transform translate-y-0 ${lato.className}`}>
             Discover transformative psychology books that unlock the mysteries of the human mind.
