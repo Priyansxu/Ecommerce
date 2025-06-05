@@ -12,7 +12,7 @@ export default function Hero() {
          <h1 className={`inline-block text-4xl lg:text-6xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-br from-white from-0% via-white via-60% to-gray-400 to-100% transition-all duration-600 ease-in-out transform translate-y-0 ${raleway.className}`}> 
        Ecommerce Website
           </h1>
-          <p className={`text-gray-400 text-lg max-w-2xl mx-auto transition-all duration-600 ease-in-out transform translate-y-0 ${lato.className}`}>
+          <p className={`text-lg max-w-2xl mx-auto text-transparent bg-clip-text bg-gradient-to-b from-[#BDA5FB] from-0% via-[#BDA5FB] via-60% to-gray-500 to-100% transition-all duration-600 ease-in-out transform translate-y-0 ${lato.className}`}>
             Discover transformative psychology books that unlock the mysteries of the human mind.
           </p>
         </div>
